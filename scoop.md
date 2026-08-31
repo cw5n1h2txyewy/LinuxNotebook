@@ -9,7 +9,6 @@ scoop search <name>
 例如：
 
 ```powershell
-scoop search codex
 scoop search ffmpeg
 ```
 
@@ -50,7 +49,7 @@ scoop install <name>
 例如：
 
 ```powershell
-scoop install codex
+scoop install ffmpeg
 ```
 
 指定 bucket：
@@ -103,25 +102,25 @@ scoop list
 过滤：
 
 ```powershell
-scoop list codex
+scoop list ffmpeg
 ```
 
 查看安装目录：
 
 ```powershell
-scoop prefix codex
+scoop prefix ffmpeg
 ```
 
 例如可能返回：
 
 ```text
-C:\Users\lihon\scoop\apps\codex\current
+C:\Users\Jerry\scoop\apps\ffmpeg\current
 ```
 
 查某个命令到底由 Scoop 哪个 shim 提供：
 
 ```powershell
-scoop which codex
+scoop which ffmpeg
 ```
 
 这个对于排查 **WinGet / Scoop / npm / cargo 同名命令冲突**尤其好用。
@@ -148,7 +147,7 @@ bucket manifests
 ### 更新单个程序
 
 ```powershell
-scoop update codex
+scoop update ffmpeg
 ```
 
 ### 更新全部程序
@@ -197,13 +196,13 @@ scoop uninstall <name>
 例如：
 
 ```powershell
-scoop uninstall codex
+scoop uninstall ffmpeg
 ```
 
 全局软件：
 
 ```powershell
-scoop uninstall codex -g
+scoop uninstall ffmpeg -g
 ```
 
 ### 删除 persist 数据
@@ -237,17 +236,17 @@ scoop uninstall <name> --purge
 Scoop 更新以后通常会保留以前的版本：
 
 ```text
-~/scoop/apps/codex/
-├── 0.145.0
-├── 0.146.0
-├── 0.146.1
+~/scoop/apps/ffmpeg/
+├── 8.1.2
+├── 9.0
+├── 9.0.1
 └── current
 ```
 
 清理某一个：
 
 ```powershell
-scoop cleanup codex
+scoop cleanup ffmpeg
 ```
 
 清理全部：
@@ -279,7 +278,7 @@ scoop cache
 删除某个软件缓存：
 
 ```powershell
-scoop cache rm codex
+scoop cache rm ffmpeg
 ```
 
 清空所有缓存：
@@ -408,7 +407,7 @@ scoop reset <name>
 例如：
 
 ```powershell
-scoop reset codex
+scoop reset ffmpeg
 ```
 
 它会重新设置：
@@ -442,7 +441,7 @@ scoop shim list
 查看具体 shim：
 
 ```powershell
-scoop shim info codex
+scoop shim info ffmpeg
 ```
 
 自己创建：
@@ -558,7 +557,7 @@ scoop checkup
 
 ------
 
-# 我建议你实际记住这 15 条
+# 我建议你实际记住这 16 条
 
 ```powershell
 # 搜
@@ -607,5 +606,8 @@ scoop which <command>
 
 # 导出环境
 scoop export > scoop.json
+
+# 导入环境
+scoop import scoop.json
 ```
 
